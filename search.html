@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+ -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Games4gd</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Creative CSS -->
+    <link href="css/creative.css" rel="stylesheet"> 
+
+    <!-- Search CSS -->
+    <link href='css/search.css' rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Firebase connection -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src = 'js/firebasecnx.js'></script>
+
+    <!-- Sign on -->
+    <script type = 'text/javascript' src = 'js/signon.js'></script>
+
+    <!-- Search -->
+    <script type = 'text/javascript' src = 'js/search.js'></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+        <nav id="mainNav" style='background-color: #333' class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html" style="font-family: 'itc' !important; display: inline; margin-right: -14px;" >games</a>
+                <a class="middle page-scroll" href="index.html" style="font-family: 'itc' !important; display: inline; margin-right: -14px;">4</a>
+                <a class="navbar-brand page-scroll" href="index.html" style="font-family: 'itc' !important; display: inline;">gd</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class ='form-inline' action = 'search.html' method= 'GET'>
+                        <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input name = 'game' type="text" class="search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button style = 'background-color: rgba(0,0,0,0)' class="btn" type="button">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        </form>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a onclick = 'all-games' class="page-scroll" href="search.html">Games</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+
+                            <li class="in" style='display:none'><a href = 'user.html'>My account</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="out"><a href="signin.html">Sign in</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="out"><a href="signup.html">Sign Up</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="in" style='display:none'><a onclick = 'logOut();'>Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class='container col-md-2'>
+        <div style="width:1px; height:600px; border-right: thin solid #eff0f2;float:right;">
+        </div>
+    </div>
+        <!-- Page Content -->
+    <div class="container col-md-8" style ='background-color: white; margin-top: -18px; min-height: 100%'>
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Listings
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+<!-- $10
+<input type="hidden" name="hosted_button_id" value="EZ3DV7XVVGTG2">
+$5
+value="4HDSNNZFCEH5G" -->
+<!-- value="https://www.games4gd.com/search?batman"
+ -->
+<!-- oGPAXQNdxoidsD9A0kAHz4zCYRe8eEUH-d-BJXaej7pryWc7sf5ym04GwLK
+ -->
+
+        <!-- Project One -->
+        <div id = 'game1'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game1_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game1_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game1_rating'></h6>
+                <div class='col-md-4' id = 'game1_stock'></div>
+                <div class='col-md-4' id = 'game1_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game1_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game1_summary_snip' style='display: inline;'></h6>
+                    <div id='game1_hider' style="display: inline;"><h6 id='game1_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game1_more' onclick="hide('game1')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game1_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game1_link' type="hidden" name="return">
+                            <input id='game1_buy' type="hidden" name="hosted_button_id">
+                            <input id='game1_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /.row -->
+
+        <!-- Project Two -->
+        <div id = 'game2'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game2_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game2_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game2_rating'></h6>
+                <div class='col-md-4' id = 'game2_stock'></div>
+                <div class='col-md-4' id = 'game2_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game2_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    </div>
+                    
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game2_summary_snip' style='display: inline;'></h6>
+                    <div id='game2_hider' style="display: inline;"><h6 id='game2_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game2_more' onclick="hide('game2')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game2_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game2_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game2_buy'>
+                            <input id='game2_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Three -->
+        <div id = 'game3'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game3_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game3_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game3_rating'></h6>
+                <div class='col-md-4' id = 'game3_stock'></div>
+                <div class='col-md-4' id = 'game3_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game3_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game3_summary_snip' style='display: inline;'></h6>
+                    <div id='game3_hider' style="display: inline;"><h6 id='game3_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game3_more' onclick="hide('game3')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game3_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game3_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game3_buy'>
+                            <input id='game3_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Four -->
+        <div id = 'game4'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game4_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game4_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game4_rating'></h6>
+                <div class='col-md-4' id = 'game4_stock'></div>
+                <div class='col-md-4' id = 'game4_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game4_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game4_summary_snip' style='display: inline;'></h6>
+                    <div id='game4_hider' style="display: inline;"><h6 id='game4_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game4_more' onclick="hide('game4')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game4_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game4_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game4_buy'>
+                            <input id='game4_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Five -->
+        <div id = 'game5'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game5_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game5_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game5_rating'></h6>
+                <div class='col-md-4' id = 'game5_stock'></div>
+                <div class='col-md-4' id = 'game5_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game5_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game5_summary_snip' style='display: inline;'></h6>
+                    <div id='game5_hider' style="display: inline;"><h6 id='game5_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game5_more' onclick="hide('game5')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game5_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game5_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game5_buy'>
+                            <input id='game5_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Six -->
+        <div id = 'game6'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game6_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game6_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game6_rating'></h6>
+                <div class='col-md-4' id = 'game6_stock'></div>
+                <div class='col-md-4' id = 'game6_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game6_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game6_summary_snip' style='display: inline;'></h6>
+                    <div id='game6_hider' style="display: inline;"><h6 id='game6_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game6_more' onclick="hide('game6')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game6_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game6_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game6_buy'>
+                            <input id='game6_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Seven -->
+        <div id = 'game7'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game7_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game7_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game7_rating'></h6>
+                <div class='col-md-4' id = 'game7_stock'></div>
+                <div class='col-md-4' id = 'game7_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game7_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game7_summary_snip' style='display: inline;'></h6>
+                    <div id='game7_hider' style="display: inline;"><h6 id='game7_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game7_more' onclick="hide('game7')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game7_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game7_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game7_buy'>
+                            <input id='game7_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Eight -->
+        <div id = 'game8'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game8_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game8_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game8_rating'></h6>
+                <div class='col-md-4' id = 'game8_stock'></div>
+                <div class='col-md-4' id = 'game8_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game8_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game8_summary_snip' style='display: inline;'></h6>
+                    <div id='game8_hider' style="display: inline;"><h6 id='game8_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game8_more' onclick="hide('game8')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game8_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game8_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game8_buy'>
+                            <input id='game8_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Nine -->
+        <div id = 'game9'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game9_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game9_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game9_rating'></h6>
+                <div class='col-md-4' id = 'game9_stock'></div>
+                <div class='col-md-4' id = 'game9_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game9_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game9_summary_snip' style='display: inline;'></h6>
+                    <div id='game9_hider' style="display: inline;"><h6 id='game9_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game9_more' onclick="hide('game9')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game9_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game9_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game9_buy'>
+                            <input id='game9_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Ten -->
+        <div id = 'game10'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game10_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game10_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game10_rating'></h6>
+                <div class='col-md-4' id = 'game10_stock'></div>
+                <div class='col-md-4' id = 'game10_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game10_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game10_summary_snip' style='display: inline;'></h6>
+                    <div id='game10_hider' style="display: inline;"><h6 id='game10_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game10_more' onclick="hide('game10')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game10_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game10_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game10_buy'>
+                            <input id='game10_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Eleven -->
+        <div id = 'game11'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game11_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game11_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game11_rating'></h6>
+                <div class='col-md-4' id = 'game11_stock'></div>
+                <div class='col-md-4' id = 'game11_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game11_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game11_summary_snip' style='display: inline;'></h6>
+                    <div id='game11_hider' style="display: inline;"><h6 id='game11_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game11_more' onclick="hide('game11')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game11_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game11_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game11_buy'>
+                            <input id='game11_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Twelve -->
+        <div id = 'game12'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game12_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game12_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game12_rating'></h6>
+                <div class='col-md-4' id = 'game12_stock'></div>
+                <div class='col-md-4' id = 'game12_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game12_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game12_summary_snip' style='display: inline;'></h6>
+                    <div id='game12_hider' style="display: inline;"><h6 id='game12_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game12_more' onclick="hide('game12')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game12_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game12_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game12_buy'>
+                            <input id='game12_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Thirteen -->
+        <div id = 'game13'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game13_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game13_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game13_rating'></h6>
+                <div class='col-md-4' id = 'game13_stock'></div>
+                <div class='col-md-4' id = 'game13_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game13_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game13_summary_snip' style='display: inline;'></h6>
+                    <div id='game13_hider' style="display: inline;"><h6 id='game13_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game13_more' onclick="hide('game13')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game13_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game13_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game13_buy'>
+                            <input id='game13_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Fourteen -->
+        <div id = 'game14'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game14_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10" id = 'game14'>
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game14_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game14_rating'></h6>
+                <div class='col-md-4' id = 'game14_stock'></div>
+                <div class='col-md-4' id = 'game14_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game14_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game14_summary_snip' style='display: inline;'></h6>
+                    <div id='game14_hider' style="display: inline;"><h6 id='game14_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game14_more' onclick="hide('game14')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game14_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game14_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game14_buy'>
+                            <input id='game14_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project Fifteen -->
+        <div id = 'game15'>
+            <div class="col-md-2">
+                <a href="#">
+                    <img id ='game15_cover' alt="" width = '130' style='margin-bottom:15px'>
+                </a>
+            </div>
+            <div class="col-md-10" id = 'game15'>
+                <h3 style='margin-top: -1px; margin-bottom: 35px;' id='game15_name'></h3>
+                <h6 style='margin-top:-25px;' id = 'game15_rating'></h6>
+                <div class='col-md-4' id = 'game15_stock'></div>
+                <div class='col-md-4' id = 'game15_price'></div>
+                <div class='col-md-4'>
+                    <div id = 'game15_platform' class="btn-group btn-group-sm" role="group" aria-label="...">
+                    
+                    </div>
+                </div>
+                <div class='row' style='background-color: rgba(0,0,0,0);'></div>
+                <div class='col-md-8' style='clear: both; line-height: 15px;'>
+                    <h6 id='game15_summary_snip' style='display: inline;'></h6>
+                    <div id='game15_hider' style="display: inline;"><h6 id='game15_summary_long' style='display: inline;'></h6></div>
+                    <h6 id='game15_more' onclick="hide('game15')" style='display: inline; cursor: pointer; color: #F05F40'></h6>
+                </div>
+                <div class='col-md-4'>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <form id ='game15_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input id='game15_link' type="hidden" name="return">
+                            <input type="hidden" name="hosted_button_id" id='game15_buy'>
+                            <input id='game15_itemname' type="hidden" name="item_name">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</body>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.js"></script>
+</html>

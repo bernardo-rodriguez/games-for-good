@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+ -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Games4gd</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Creative CSS -->
+    <link href="css/creative.css" rel="stylesheet"> 
+
+    <!-- Search CSS -->
+    <link href='css/search.css' rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Firebase connection -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src = 'js/firebasecnx.js'></script>
+
+    <!-- Sign on -->
+    <script type = 'text/javascript' src = 'js/signon.js'></script>
+
+    <!-- Search -->
+    <script type = 'text/javascript' src = 'js/search.js'></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+        <nav id="mainNav" style='background-color: #333' class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html" style="font-family: 'itc' !important; display: inline; margin-right: -14px;" >games</a>
+                <a class="middle page-scroll" href="index.html" style="font-family: 'itc' !important; display: inline; margin-right:-14px;">4</a>
+                <a class="navbar-brand page-scroll" href="index.html" style="font-family: 'itc' !important; display: inline;">gd</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class ='form-inline' action = 'search.html' method= 'GET'>
+                        <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input name = 'game' type="text" class="search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button style = 'background-color: rgba(0,0,0,0)' class="btn" type="button">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        </form>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a onclick = 'all-games' class="page-scroll" href="search.html">Games</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+
+                            <li class="in" style='display:none'><a href = 'user.html'>My account</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="out"><a href="signin.html">Sign in</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="out"><a href="signup.html">Sign Up</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="in" style='display:none'><a onclick = 'logOut();'>Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+<hr class="">
+<div class="container target">
+    <div class="row">
+        <div class="col-sm-10">
+             <h1 class="" id = 'username'></h1>
+
+        </div>
+
+    </div>
+  <br>
+    <div class="row">
+        <div class="col-sm-3">
+   
+            <ul class="list-group">
+                <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i>
+
+                </li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Games bought</strong></span> 0</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Games Donated</strong></span> 0</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Total Money Donated</strong></span> $0</li>
+            </ul>
+           
+        </div>
+        <!--/col-3-->
+        <div class="col-sm-9" style="" contenteditable="false">
+            <div class="panel panel-default target">
+                <div class="panel-heading" contenteditable="false">Games Bought</div>
+                <div class="panel-body">
+<!--                   <div class="row"> 
+ -->            </div>                     
+            </div>                 
+        </div>
+   		<div class="col-sm-9" style="" contenteditable="false">
+            <div class="panel panel-default target">
+                <div class="panel-heading" contenteditable="false">Games Donated</div>
+                <div class="panel-body">
+                  <div class="row"> 
+            </div>                     
+            </div>                 
+        </div>
+
+
+         </div>
+<script>
+	setTimeout(function(){
+		var user = firebase.auth().currentUser;
+		document.getElementById('username').innerHTML = user.email
+	}, 500);
+	console.log("whatsup");
+</script> 

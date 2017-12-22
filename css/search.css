@@ -1,0 +1,39 @@
+/*!
+ * Start Bootstrap - 1 Col Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+	background-color: white;
+  padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+footer {
+    margin: 50px 0;
+}
+header {
+	background-image: url('../img/header.jpg');
+
+}
+.row{
+	background-color: white;
+}
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#eff0f2;
+  height: 1px;
+}
+hr.platforms{
+  margin-top: -3px; 
+  margin-bottom: -3px
+}
+
+body, html {
+     height: 100%;
+}
+*:focus{
+  outline:0 !important;
+}
