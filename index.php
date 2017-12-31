@@ -1,4 +1,1 @@
-<?php 
-include_once ('index.html'); 
-include_once ('css');
-?>
+<?php include_once ('index.html'); ?>
