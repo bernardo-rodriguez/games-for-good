@@ -51,19 +51,19 @@ gulp.task('minify-js', function() {
         }))
 });
 
-// Copy vendr libraries from /node_modules into /vendr
+// Copy boot libraries from /node_modules into /boot
 gulp.task('copy', function() {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('vendr/bootstrap'))
+        .pipe(gulp.dest('boot/bootstrap'))
 
     gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('vendr/jquery'))
+        .pipe(gulp.dest('boot/jquery'))
 
     gulp.src(['node_modules/magnific-popup/dist/*'])
-        .pipe(gulp.dest('vendr/magnific-popup'))
+        .pipe(gulp.dest('boot/magnific-popup'))
 
     gulp.src(['node_modules/scrollreveal/dist/*.js'])
-        .pipe(gulp.dest('vendr/scrollreveal'))
+        .pipe(gulp.dest('boot/scrollreveal'))
 
     gulp.src([
             'node_modules/font-awesome/**',
@@ -73,7 +73,7 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.md',
             '!node_modules/font-awesome/*.json'
         ])
-        .pipe(gulp.dest('vendr/font-awesome'))
+        .pipe(gulp.dest('boot/font-awesome'))
 })
 npm install -g firebase-tools
 // Run everything
