@@ -1,1 +1,4 @@
-<?php include_once ('index.html'); ?>
+<?php
+ print('hello');
+ //include_once ('index.html'); 
+ ?>
